@@ -14,10 +14,15 @@ photo slots are still labelled placeholders.
 
 ## Deploy on Vercel
 
-1. Push this folder to a new GitHub repo (the files sit at the repo root).
-2. In Vercel: **Add New → Project**, import the repo.
-3. Framework preset: **Other**. Leave build command and output directory empty.
-4. Deploy. Every push to the repo updates the preview.
+The repo is a plain static site with no build step. `vercel.json` already tells Vercel to use the
+**Other** preset, with no install or build command and the repo root as the output directory.
+
+1. In Vercel: **Add New → Project**, then import `Amplihub/yoga-tribe`.
+2. Leave every setting at its default and click **Deploy**.
+3. Every push to `main` updates the preview, and other branches get their own preview URLs.
+
+The `v3/`, `v4/` and `v6/` folders must be in the repo next to `index.html`, because the
+preview loads them in iframes.
 
 The pages are set to `noindex`, so search engines won't list the preview.
 
