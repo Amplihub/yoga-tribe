@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Yoga Tribe · Black Friday LP previews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;600;800&display=swap">
+<style>
+:root{--ink:#151412;--paper:#F2EDE5;--line:rgba(21,20,18,.14);--muted:#6B655E;--accent:#C2412A}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:'Sofia Sans',system-ui,sans-serif;background:#E7E1D7;color:var(--ink);display:flex;flex-direction:column}
+header{background:var(--ink);color:var(--paper);display:flex;align-items:center;gap:16px;padding:10px 16px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:15px;letter-spacing:.02em;white-space:nowrap}
+.brand small{display:block;font-weight:400;font-size:12px;color:#B9B1A6;letter-spacing:0}
+nav.tabs{display:flex;gap:4px;flex:1;min-width:0;overflow-x:auto}
+nav.tabs button,.seg button{font:inherit;cursor:pointer;border:0;border-radius:6px;padding:9px 14px;white-space:nowrap}
+nav.tabs button{background:transparent;color:#D9D2C8;font-weight:600;font-size:14px}
+nav.tabs button:hover{background:rgba(255,255,255,.08)}
+nav.tabs button[aria-selected=true]{background:var(--paper);color:var(--ink)}
+.seg{display:flex;background:rgba(255,255,255,.1);border-radius:8px;padding:3px}
+.seg button{background:transparent;color:#D9D2C8;font-weight:600;font-size:13px;padding:7px 12px}
+.seg button[aria-pressed=true]{background:var(--accent);color:#fff}
+a.open{color:#D9D2C8;font-size:13px;text-decoration:none;white-space:nowrap;border:1px solid rgba(255,255,255,.25);border-radius:6px;padding:7px 10px}
+a.open:hover{color:#fff;border-color:#fff}
+main{flex:1;min-height:0;display:flex;justify-content:center;align-items:stretch}
+main.mobile{padding:24px 16px;overflow:auto}
+.phone{width:414px;max-width:100%;height:min(880px,calc(100vh - 120px));background:#111;border-radius:44px;padding:12px;box-shadow:0 30px 60px rgba(0,0,0,.25);flex:0 0 auto;align-self:center}
+.phone iframe{width:100%;height:100%;border:0;border-radius:34px;background:#fff;display:block}
+main.desktop iframe{width:100%;height:100%;border:0;background:#fff;display:block}
+@media (max-width:700px){
+  .seg,a.open{display:none}
+  main.mobile{padding:0}
+  .phone{width:100%;height:100%;border-radius:0;padding:0;box-shadow:none}
+  .phone iframe{border-radius:0}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Yoga Tribe · Black Friday LP<small>4-Week Mobility Reset · design previews</small></div>
+  <nav class="tabs" role="tablist" id="tabs"></nav>
+  <div class="seg" id="seg">
+    <button data-view="mobile">Mobile</button>
+    <button data-view="desktop">Desktop</button>
+  </div>
+  <a class="open" id="open" target="_blank" rel="noopener">Open full page ↗</a>
+</header>
+<main id="stage"></main>
+<script>
+const DESIGNS = [{"id": "v6", "label": "V6 \u00b7 Black Friday Issue"}, {"id": "v4", "label": "V4 \u00b7 The Black Friday Pass"}, {"id": "v3", "label": "V3 \u00b7 New Fonts"}];
+const tabs = document.getElementById('tabs'), stage = document.getElementById('stage'),
+      seg = document.getElementById('seg'), openLink = document.getElementById('open');
+const small = () => matchMedia('(max-width:700px)').matches;
+let state = {id: DESIGNS[0].id, view: 'mobile'};
+function readHash(){
+  const [id, view] = location.hash.slice(1).split('/');
+  if (DESIGNS.some(d => d.id === id)) state.id = id;
+  if (view === 'mobile' || view === 'desktop') state.view = view;
+}
+function render(){
+  const view = small() ? 'mobile' : state.view;
+  const src = `${state.id}/${view}.html`;
+  tabs.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.id === state.id));
+  seg.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === view));
+  openLink.href = src;
+  stage.className = view;
+  stage.innerHTML = view === 'mobile'
+    ? `<div class="phone"><iframe src="${src}" title="Mobile preview"></iframe></div>`
+    : `<iframe src="${src}" title="Desktop preview"></iframe>`;
+  document.title = DESIGNS.find(d => d.id === state.id).label + ' · Yoga Tribe BF';
+}
+function go(patch){ Object.assign(state, patch); history.replaceState(null, '', `#${state.id}/${state.view}`); render(); }
+DESIGNS.forEach(d => {
+  const b = document.createElement('button');
+  b.textContent = d.label; b.dataset.id = d.id; b.setAttribute('role', 'tab');
+  b.onclick = () => go({id: d.id});
+  tabs.appendChild(b);
+});
+seg.querySelectorAll('button').forEach(b => b.onclick = () => go({view: b.dataset.view}));
+window.addEventListener('hashchange', () => { readHash(); render(); });
+let lastSmall = small();
+window.addEventListener('resize', () => { if (small() !== lastSmall) { lastSmall = small(); render(); } });
+readHash(); render();
+</script>
+</body>
+</html>
