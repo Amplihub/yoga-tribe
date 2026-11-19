@@ -18,17 +18,12 @@ Stock photos in `images/`, free to use under the [Unsplash License](https://unsp
 
 - `back-stretch.jpg`: Margaret Young, [unsplash.com/photos/ocNf_njy6JA](https://unsplash.com/photos/ocNf_njy6JA)
 - `hand-lower-back.jpg`: Sasun Bughdaryan, [unsplash.com/photos/bNdiJ1FEbV4](https://unsplash.com/photos/bNdiJ1FEbV4)
+- `now-back-pain.jpg`: still frame from a video by Kindel Media on Pexels, [pexels.com/video/7297842](https://www.pexels.com/video/close-up-view-of-a-woman-massaging-her-back-7297842/), free to use under the [Pexels License](https://www.pexels.com/license/)
+- `after-open-arms.jpg`: Susanna Marsiglia, [unsplash.com/photos/Ai5X2p8Ydww](https://unsplash.com/photos/Ai5X2p8Ydww)
 - `week1-breath.jpg`: Margaret Young, [unsplash.com/photos/yxDXkuAxwhE](https://unsplash.com/photos/yxDXkuAxwhE)
 - `week2-pilates.jpg`: ROXANA POPOVICI, [unsplash.com/photos/aY5uOJ2o96g](https://unsplash.com/photos/aY5uOJ2o96g)
 - `week3-hips.jpg`: Alina Rubo, [unsplash.com/photos/TaxQjdfhGQM](https://unsplash.com/photos/TaxQjdfhGQM)
 - `week4-sound-bath.jpg`: THLT LCX, [unsplash.com/photos/Hn4wYHOaeIc](https://unsplash.com/photos/Hn4wYHOaeIc)
-
-Stock videos in `videos/` (posters in `images/`):
-
-- `now-back-pain-*.mp4`: Kindel Media on Pexels, [pexels.com/video/7297842](https://www.pexels.com/video/close-up-view-of-a-woman-massaging-her-back-7297842/), free to use under the [Pexels License](https://www.pexels.com/license/)
-- `after-stretch-*.mp4`: Mixkit, [mixkit.co/free-stock-video/...-31400](https://mixkit.co/free-stock-video/girl-stretching-on-the-edge-of-her-bed-after-waking-31400/), under the [Mixkit Stock Video Free License](https://mixkit.co/license/)
-
-The desktop page loads the 720p files and the mobile page the 360p files.
 
 ## Deploy on Vercel
 
