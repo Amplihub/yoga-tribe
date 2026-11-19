@@ -18,6 +18,9 @@ Stock photos in `images/`, free to use under the [Unsplash License](https://unsp
 
 - `back-stretch.jpg`: Margaret Young, [unsplash.com/photos/ocNf_njy6JA](https://unsplash.com/photos/ocNf_njy6JA)
 - `hand-lower-back.jpg`: Sasun Bughdaryan, [unsplash.com/photos/bNdiJ1FEbV4](https://unsplash.com/photos/bNdiJ1FEbV4)
+- `week1-breath.jpg`: Margaret Young, [unsplash.com/photos/yxDXkuAxwhE](https://unsplash.com/photos/yxDXkuAxwhE)
+- `week3-hips.jpg`: Alina Rubo, [unsplash.com/photos/TaxQjdfhGQM](https://unsplash.com/photos/TaxQjdfhGQM)
+- `week4-sound-bath.jpg`: THLT LCX, [unsplash.com/photos/Hn4wYHOaeIc](https://unsplash.com/photos/Hn4wYHOaeIc)
 
 ## Deploy on Vercel
 
