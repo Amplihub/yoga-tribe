@@ -10,7 +10,14 @@ go to `mobile.html`, and wider screens go to `/`. Old preview links (`/v3/...`, 
 `/v6/...`) redirect to the right page through `vercel.json`.
 
 This is a design preview only. The real page gets built in Wix. Videos stream from Cloudinary;
-photo slots are still labelled placeholders.
+most photo slots are still labelled placeholders.
+
+## Photo credits
+
+Stock photos in `images/`, free to use under the [Unsplash License](https://unsplash.com/license):
+
+- `stretch-at-desk.jpg`: Vitaly Gariev, [unsplash.com/photos/jYg5NFTlOy0](https://unsplash.com/photos/jYg5NFTlOy0)
+- `hand-lower-back.jpg`: Sasun Bughdaryan, [unsplash.com/photos/bNdiJ1FEbV4](https://unsplash.com/photos/bNdiJ1FEbV4)
 
 ## Deploy on Vercel
 
