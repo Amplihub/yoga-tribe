@@ -15,5 +15,27 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/v3/desktop.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/v3/mobile.html",
+      "destination": "/mobile.html",
+      "permanent": false
+    },
+    {
+      "source": "/v4/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/v6/:path*",
+      "destination": "/",
+      "permanent": false
+    }
   ]
 }

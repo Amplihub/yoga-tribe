@@ -1,16 +1,29 @@
-# Yoga Tribe · Black Friday landing page previews
+# Yoga Tribe · Black Friday landing page
 
-Static preview of the three current designs for the 4-Week Mobility Reset Black Friday page:
+Static build of the V3 design for the 4-Week Mobility Reset Black Friday page.
 
-- **V6 · Black Friday Issue** (`/v6/mobile.html`, `/v6/desktop.html`)
-- **V4 · The Black Friday Pass** (`/v4/...`)
-- **V3 · New Fonts** (`/v3/...`)
+- `index.html` is the desktop layout, served at the site root.
+- `mobile.html` is the mobile layout.
 
-Open `index.html` to switch designs with the tabs and flip between Mobile and Desktop.
-Links can point straight at a view, e.g. `/#v4/desktop`.
+A one-line script at the top of each page picks the right layout: screens narrower than 768px
+go to `mobile.html`, and wider screens go to `/`. Old preview links (`/v3/...`, `/v4/...`,
+`/v6/...`) redirect to the right page through `vercel.json`.
 
-These are design previews only. The real page gets built in Wix. Videos stream from Cloudinary;
-photo slots are still labelled placeholders.
+This is a design preview only. The real page gets built in Wix. Videos stream from Cloudinary;
+most photo slots are still labelled placeholders.
+
+## Photo credits
+
+Stock photos in `images/`, free to use under the [Unsplash License](https://unsplash.com/license):
+
+- `back-stretch.jpg`: Margaret Young, [unsplash.com/photos/ocNf_njy6JA](https://unsplash.com/photos/ocNf_njy6JA)
+- `hand-lower-back.jpg`: Sasun Bughdaryan, [unsplash.com/photos/bNdiJ1FEbV4](https://unsplash.com/photos/bNdiJ1FEbV4)
+- `now-back-pain.jpg`: still frame from a video by Kindel Media on Pexels, [pexels.com/video/7297842](https://www.pexels.com/video/close-up-view-of-a-woman-massaging-her-back-7297842/), free to use under the [Pexels License](https://www.pexels.com/license/)
+- `after-open-arms.jpg`: Susanna Marsiglia, [unsplash.com/photos/Ai5X2p8Ydww](https://unsplash.com/photos/Ai5X2p8Ydww)
+- `week1-breath.jpg`: Margaret Young, [unsplash.com/photos/yxDXkuAxwhE](https://unsplash.com/photos/yxDXkuAxwhE)
+- `week2-pilates.jpg`: ROXANA POPOVICI, [unsplash.com/photos/aY5uOJ2o96g](https://unsplash.com/photos/aY5uOJ2o96g)
+- `week3-hips.jpg`: Alina Rubo, [unsplash.com/photos/TaxQjdfhGQM](https://unsplash.com/photos/TaxQjdfhGQM)
+- `week4-sound-bath.jpg`: THLT LCX, [unsplash.com/photos/Hn4wYHOaeIc](https://unsplash.com/photos/Hn4wYHOaeIc)
 
 ## Deploy on Vercel
 
@@ -19,16 +32,13 @@ The repo is a plain static site with no build step. `vercel.json` already tells 
 
 1. In Vercel: **Add New → Project**, then import `Amplihub/yoga-tribe`.
 2. Leave every setting at its default and click **Deploy**.
-3. Every push to `main` updates the preview, and other branches get their own preview URLs.
+3. Every push to `main` updates the site, and other branches get their own preview URLs.
 
-The `v3/`, `v4/` and `v6/` folders must be in the repo next to `index.html`, because the
-preview loads them in iframes.
-
-The pages are set to `noindex`, so search engines won't list the preview.
+The pages are set to `noindex`, so search engines won't list them.
 
 ## Run locally
 
-Open `index.html` through any static server, for example:
+Serve the folder with any static server, for example:
 
 ```
 npx serve .
