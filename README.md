@@ -18,6 +18,7 @@ Stock photos in `images/`, free to use under the [Unsplash License](https://unsp
 
 - `back-stretch.jpg`: Margaret Young, [unsplash.com/photos/ocNf_njy6JA](https://unsplash.com/photos/ocNf_njy6JA)
 - `hand-lower-back.jpg`: Sasun Bughdaryan, [unsplash.com/photos/bNdiJ1FEbV4](https://unsplash.com/photos/bNdiJ1FEbV4)
+- `before-stiff.jpg` and `after-open.jpg` (toned muted / warm): Margaret Young, [unsplash.com/photos/K8EyMWEED3Y](https://unsplash.com/photos/K8EyMWEED3Y) and [unsplash.com/photos/5ARaBcZL_KU](https://unsplash.com/photos/5ARaBcZL_KU)
 - `week1-breath.jpg`: Margaret Young, [unsplash.com/photos/yxDXkuAxwhE](https://unsplash.com/photos/yxDXkuAxwhE)
 - `week2-pilates.jpg`: ROXANA POPOVICI, [unsplash.com/photos/aY5uOJ2o96g](https://unsplash.com/photos/aY5uOJ2o96g)
 - `week3-hips.jpg`: Alina Rubo, [unsplash.com/photos/TaxQjdfhGQM](https://unsplash.com/photos/TaxQjdfhGQM)
