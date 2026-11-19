@@ -16,7 +16,7 @@ most photo slots are still labelled placeholders.
 
 Stock photos in `images/`, free to use under the [Unsplash License](https://unsplash.com/license):
 
-- `stretch-at-desk.jpg`: Vitaly Gariev, [unsplash.com/photos/jYg5NFTlOy0](https://unsplash.com/photos/jYg5NFTlOy0)
+- `back-stretch.jpg`: Margaret Young, [unsplash.com/photos/ocNf_njy6JA](https://unsplash.com/photos/ocNf_njy6JA)
 - `hand-lower-back.jpg`: Sasun Bughdaryan, [unsplash.com/photos/bNdiJ1FEbV4](https://unsplash.com/photos/bNdiJ1FEbV4)
 
 ## Deploy on Vercel
